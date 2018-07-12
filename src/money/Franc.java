@@ -1,16 +1,13 @@
 package money;
 
 public class Franc extends Money {
-	private String currency;
-	Franc(int amount) {
+	Franc(int amount, String currency) {
 		// TODO 自動生成されたコンストラクター・スタブ
 		this.amount = amount ;
-		currency = "CHF";
+		this.currency = currency;
 	}
-	String currency() {
-		return currency;
-	}
+
 	Money times (int multiplier){
-		return new Franc (amount * multiplier);
+		return Money.franc(amount * multiplier);
 	}
 }
