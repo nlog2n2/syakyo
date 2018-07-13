@@ -5,8 +5,9 @@ public class Dollar extends Money {
 		// TODO 自動生成されたコンストラクター・スタブ
 		super(amount,currency);
 	}
+
 	Money times (int multiplier){
-		return Money.dollar(amount * multiplier);
+		return new Dollar(amount * multiplier,"USD");
 	}
 
 }
