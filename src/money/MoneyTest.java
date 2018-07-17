@@ -70,8 +70,8 @@ public class MoneyTest {
 	}
 
 	@Test
-	public void testArrayEquals() {
-		assertEquals(new Object[] {"abc"}, new Object[] {"abc"});
+	public void testIdentiyRate() {
+		assertEquals(1, new Bank().rate("USD", "USD"));
 	}
 
 }
