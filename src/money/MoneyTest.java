@@ -37,4 +37,12 @@ public class MoneyTest {
 
 	}
 
+	@Test
+	public void testPlusReturnSum() {
+		Money five = Money.dollar(5);
+		Expression result = five.plus(five);
+		Sum sum = (Sum) result;
+		assertEquals(five, sum.augend);
+		assertEquals(five, sum.addend);
+	}
 }
